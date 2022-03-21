@@ -458,7 +458,7 @@ const
 
 implementation
 
-{$IFNDEF MSWINDOWS} uses Img32.FMX;{$ENDIF}
+//{$IFNDEF MSWINDOWS} uses Img32.FMX;{$ENDIF}
 
 resourcestring
   rsRoot                   = 'root';

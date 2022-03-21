@@ -167,9 +167,9 @@ function BlendColorDodge(bgColor, fgColor: TColor32): TColor32;
 implementation
 
 uses
-  {$IFNDEF MSWINDOWS}
-  Img32.FMX,
-  {$ENDIF}
+//  {$IFNDEF MSWINDOWS}
+//  Img32.FMX,
+//  {$ENDIF}
   Img32.Transform;
 
 const

@@ -13,8 +13,8 @@ package Img32_Library;
 {$LONGSTRINGS ON}
 {$OPENSTRINGS ON}
 {$OPTIMIZATION OFF}
-{$OVERFLOWCHECKS OFF}
-{$RANGECHECKS OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
 {$REFERENCEINFO ON}
 {$SAFEDIVIDE OFF}
 {$STACKFRAMES ON}
@@ -50,7 +50,8 @@ contains
   Img32.Vector in '..\Img32.Vector.pas',
   Clipper in '..\Clipper\Clipper.pas',
   ClipperCore in '..\Clipper\ClipperCore.pas',
-  ClipperOffset in '..\Clipper\ClipperOffset.pas';
+  ClipperOffset in '..\Clipper\ClipperOffset.pas',
+  img32.VCL in '..\img32.VCL.pas';
 
 end.
 
