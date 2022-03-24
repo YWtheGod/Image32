@@ -474,8 +474,6 @@ type
   procedure NormalizeAngle(var angle: double; tolerance: double = Pi/360);
   function GrayScale(color: TColor32): TColor32;
 
-  {$IFDEF MSWINDOWS}
-
   //DPIAware: Useful for DPIAware sizing of images and their container controls.
   //It scales values relative to the display's resolution (PixelsPerInch).
   //See https://docs.microsoft.com/en-us/windows/desktop/hidpi/high-DPIAware-desktop-application-development-on-windows
@@ -485,6 +483,8 @@ type
   function DPIAware(const pt: TPointD): TPointD; overload;
   function DPIAware(const rec: TRect): TRect; overload;
   function DPIAware(const rec: TRectD): TRectD; overload;
+
+  {$IFDEF MSWINDOWS}
 
   {$IFDEF FPC}
   function AlphaBlend(DC: HDC; p2, p3, p4, p5: Integer;
@@ -1052,6 +1052,7 @@ begin
   Result.biCompression := BI_RGB;
 end;
 //------------------------------------------------------------------------------
+{$ENDIF}
 
 function DPIAware(val: Integer): Integer;
 begin
@@ -1096,7 +1097,6 @@ begin
   result.Bottom := rec.Bottom * DpiAwareOne;
 end;
 //------------------------------------------------------------------------------
-{$ENDIF}
 
 function GrayScale(color: TColor32): TColor32;
 var

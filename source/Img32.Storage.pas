@@ -986,7 +986,7 @@ begin
   ms := TMemoryStream.Create;
   try
     len := Length(utf8);
-    ms.SetSize(len);
+    ms.SetSize(longint(len));
     if len > 0 then
       Move(utf8[1], ms.Memory^, len);
     ms.SaveToFile(filename);
